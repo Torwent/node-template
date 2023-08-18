@@ -1,0 +1,30 @@
+{
+	"name": "node-template",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"format": "prettier --plugin-search-dir . --write .",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"fix": "prettier --plugin-search-dir . --write . && eslint . --fix",
+		"start": "ts-node src/index.ts",
+		"dev": "ts-node-dev src/index.ts",
+		"build": "tsc",
+		"prod": "node build/index.js",
+		"watch": "tsc -w"
+	},
+	"keywords": [],
+	"author": "Torwent",
+	"license": "LGPL-3.0-or-later",
+	"devDependencies": {
+		"@types/node": "^20.5.0",
+		"dotenv": "^16.3.1",
+		"eslint": "^8.47.0",
+		"eslint-config-prettier": "^9.0.0",
+		"prettier": "^3.0.2",
+		"ts-node": "^10.9.1",
+		"ts-node-dev": "^2.0.0",
+		"tslib": "^2.6.1",
+		"typescript": "^5.1.6"
+	}
+}
