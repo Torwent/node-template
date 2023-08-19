@@ -1,10 +1,12 @@
 {
+	"ts-node": { "require": ["tsconfig-paths/register"] },
 	"compilerOptions": {
 		"lib": ["ESNext"],
 		"module": "commonjs",
-		"moduleResolution": "node",
+		"moduleResolution": "Node",
 		"target": "ESNext",
 		"outDir": "build",
+		"forceConsistentCasingInFileNames": true,
 		"sourceMap": false,
 		"esModuleInterop": true,
 		"experimentalDecorators": true,
