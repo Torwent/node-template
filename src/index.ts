@@ -13,5 +13,6 @@ for (let i = 0; i < envFiles.length; i++) {
 if (!foundEnv) throw new Error(".env file not found!")
 
 setTimeout(() => {
+	console.log("here")
 	console.log(process.env.ENV_TEST)
 }, 10000)
