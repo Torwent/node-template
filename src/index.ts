@@ -1,18 +1,4 @@
-import fs from "fs"
-import dotenv from "dotenv"
-const envFiles = [".env.local", "stack.env", ".env"]
-let foundEnv = false
-for (let i = 0; i < envFiles.length; i++) {
-	if (fs.existsSync(envFiles[i])) {
-		foundEnv = true
-		dotenv.config({ path: envFiles[i] })
-		break
-	}
-}
+import "./lib/alias"
+import env from "$lib/env"
 
-if (!foundEnv) throw new Error(".env file not found!")
-
-setTimeout(() => {
-	console.log("here")
-	console.log(process.env.ENV_TEST)
-}, 10000)
+console.log(env.ENV_TEST)
