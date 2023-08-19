@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+  node-template:
+    container_name: node-template
+    build:
+      context: .
+    restart: unless-stopped
